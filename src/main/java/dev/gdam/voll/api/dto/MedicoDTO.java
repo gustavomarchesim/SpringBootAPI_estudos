@@ -11,6 +11,7 @@ public record MedicoDTO(
                 @NotBlank String nome,
                 @NotBlank @Email String email,
                 @NotBlank @Pattern(regexp = "\\d{4,6}") String crm,
+                @NotNull String telefone,
                 @NotNull EspecialidadeEnum especialidade,
                 @NotNull @Valid EnderecoDTO endereco) {
 }

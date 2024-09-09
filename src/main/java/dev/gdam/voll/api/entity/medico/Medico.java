@@ -28,7 +28,10 @@ public class Medico {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String nome;
+
+  @Column(unique = true)
   private String email;
+
   private String telefone;
 
   @Column(unique = true)
@@ -44,6 +47,7 @@ public class Medico {
     this.nome = dados.nome();
     this.email = dados.email();
     this.crm = dados.crm();
+    this.telefone = dados.telefone();
     this.especialidade = dados.especialidade(); // Sem necessidade de conversão adicional
     this.endereco = new Endereco(dados.endereco());
   }
