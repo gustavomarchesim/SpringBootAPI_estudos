@@ -7,10 +7,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record PacienteDTO(
-                @NotBlank String nome,
-                @NotBlank @Email String email,
-                @NotBlank String cpf,
-                @NotNull String telefone,
-                @NotNull @Valid EnderecoDTO endereco) {
+        @NotBlank String nome,
+        @NotBlank @Email String email,
+        @NotBlank String cpf,
+        @NotNull String telefone,
+        @NotNull @Valid EnderecoDTO endereco) {
 
 }
